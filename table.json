@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": "04D4916F69D942D7821A787416378CB6",
+      "userId": null,
+      "zjZjxxId": null,
+      "createUser": null,
+      "createDate": null,
+      "updateUser": null,
+      "updateDate": null,
+      "ztZtxxId": "8B92A11044CE4AB2A612204F04012910",
+      "chlxCode": "1",
+      "chBm": "SP00001",
+      "chMc": "杯子",
+      "jldw": "个",
+      "zt": "0",
+      "infraSzsmSmbh": null,
+      "infraSsflCode": "1050202070000000000",
+      "sl": "0.17",
+      "zsl": "0.03",
+      "smbh": null,
+      "hwlxCode": "1",
+      "infraSsflName": "玻璃家具零配件",
+      "mcPinyin": {
+        "szm": "bz",
+        "qp": null,
+        "qpNoMark": "beizi",
+        "pys": null
+      },
+      "keyword": null
+    },
+    {
+      "id": "ED2541485EA74889823F310A23F1950B",
+      "userId": null,
+      "zjZjxxId": null,
+      "createUser": null,
+      "createDate": null,
+      "updateUser": null,
+      "updateDate": null,
+      "ztZtxxId": "8B92A11044CE4AB2A612204F04012910",
+      "chlxCode": "1",
+      "chBm": "SP00002",
+      "chMc": "技术服务费",
+      "jldw": "年",
+      "zt": "0",
+      "infraSzsmSmbh": null,
+      "infraSsflCode": "3030201000000000000",
+      "sl": "0.06",
+      "zsl": "0.03",
+      "smbh": null,
+      "hwlxCode": "3",
+      "infraSsflName": "短信和彩信服务",
+      "mcPinyin": {
+        "szm": "jsfwf,jzfwf",
+        "qp": null,
+        "qpNoMark": "jishufuwufei,jizhufuwufei",
+        "pys": null
+      },
+      "keyword": null
+    },
+    {
+      "id": "EB0D3BBF5C5E4DBBA6FA11E0B8C3F761",
+      "userId": null,
+      "zjZjxxId": null,
+      "createUser": null,
+      "createDate": null,
+      "updateUser": null,
+      "updateDate": null,
+      "ztZtxxId": "8B92A11044CE4AB2A612204F04012910",
+      "chlxCode": "1",
+      "chBm": "SP00003",
+      "chMc": "技术服务费（消毒供应设备全保）",
+      "jldw": "年",
+      "zt": "0",
+      "infraSzsmSmbh": null,
+      "infraSsflCode": "3030201000000000000",
+      "sl": "0.06",
+      "zsl": "0.03",
+      "smbh": null,
+      "hwlxCode": "3",
+      "infraSsflName": "短信和彩信服务",
+      "mcPinyin": {
+        "szm": "jsfwfxdgysbqb,jzfwfxdgysbqb",
+        "qp": null,
+        "qpNoMark": "jizhufuwufeixiaodugongyingshebeiquanbao,jishufuwufeixiaodugongyingshebeiquanbao",
+        "pys": null
+      },
+      "keyword": null
+    }
+  ],
+  "success": true
+}

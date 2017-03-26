@@ -1,0 +1,29 @@
+.table {
+    border: 2px solid #ccc;
+    background-color: transparent;
+    border-spacing: 0;
+    display: table;
+}
+.table tr {
+    display:table-row;
+    vertical-align:inherit;
+    border-color:inherit;
+
+}
+
+.table th, .table td {
+    padding:8px;
+    line-height:20px;
+    text-align:left;
+    vertical-align:top;
+    border-top:1px solid #ddd;
+}
+
+.table th {
+    background-color : antiquewhite;
+    border-right:1px solid #ccc;
+}
+
+.slectLis {
+    width:40px;
+}
