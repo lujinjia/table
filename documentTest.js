@@ -272,14 +272,15 @@ window.onload =  function() {
         var data = sparklines[i].textContent.split(',').map(parseFloat);
     }
     postJSON('table.json', {}, callback);
-
+    //对全选按钮进行事件绑定
     makeSortable(document.querySelector('#sortTable'));
 
 };
 
+
 function callback(data) {
     //渲染表格
-    var data = JSON.parse(data).tableJson;
+    var data = JSON.parse(data).data;
     var tbody = document.getElementById('sort_tbody');
     while(tbody.hasChildNodes()) {
         tbody.removeChild(tbody.firstChild);
@@ -287,14 +288,51 @@ function callback(data) {
 
     var html = '';
     for (var i = 0, len = data.length; i < len; i++) {
-        var sex = data[i].sex == '1' ? '启用' : '停用';
-        html += '<tr>';
-        html += '<td>'+data[i].name+'</td><td>'+data[i].age+'</td><td>'+data[i].height+'</td><td>'+data[i].weight+'</td><td>'+sex+'</td>';
+        var zt = data[i].zt == '1' ? '启用' : '停用';
+        html += '<tr id='+data[i].id+'>';
+        html += '<td><input type="checkbox" name="checkItem"></td></td><td>'+data[i].chBm+'</td><td>'+data[i].chMc+'</td><td>'+data[i].sl+'</td><td>'+data[i].zsl+'</td><td>'+zt+'</td>';
         html += renderActions(data);
         html += '</tr>';
     }
     tbody.innerHTML = html;
+    addEvent(document.getElementById('sortTable'),'click', function(){
+        if(event.target.getAttribute('name') == 'checkItem') {
+            //单选,所以单选都选中时，勾中全选
+            if (event.target.checked) {
+                var inputs = document.getElementById('sort_tbody').getElementsByTagName('input');
+                if (setElementAttr('#sort_tbody input', checked, true)) {
+                    document.getElementById('checkAll').checked = true;
+                }
+            } else {
+                document.getElementById('checkAll').checked = false;
+            }
+        }
+        else if (event.target.getAttribute('name') == 'checkAll') {
+            //全选
+            if (event.target.checked) {
+                setElementAttr('#sort_tbody input', 'checked', '', true);
+            } else {
+                setElementAttr('#sort_tbody input', 'checked', '', false);
+            }
+        }
+        else { return false;}
+    })
 }
+
+//批量对节点属性进行判定或者获取属性值
+function setElementAttr(selector, attr, value1, value2) {
+    var elements = document.querySelectorAll(selector);
+    var result = false;
+    for (var i = 0, len = elements.length; i < len; i++) {
+        if (value1 && elements[i].getAttribute(attr) == value1) {
+            return true;
+        } else {
+            elements[i][attr] = value2;
+        }
+    }
+    return result;
+}
+
 
 //渲染操作栏
 function renderActions(data) {
@@ -304,14 +342,35 @@ function renderActions(data) {
     return actionHtml;
 }
 
+//事件绑定原生实现
+function addEvent(target,type, handler) {
+    if (target.addEventListener) {
+        target.addEventListener(type,handler,false);
+    }
+    else {
+        target.attachEvent('on'+type, function(event) {
+            return handler.call(target, event);
+        });
+    }
+}
+
+//事件取消原生实现
+function cancelHandler(event) {
+    var event = event || window.event;
+    if (event.preventDefault) event.preventDefault();
+    if (event.returnValue) event.returnValue = false;
+    return false;
+}
+
+//业务处理代码
 function viewChxx() {
-    alert('view');
+    alert('viewChxx');
 }
 
 function editChxx() {
-    alert('edit');
+    alert('editChxx');
 }
 
 function deleteChxx() {
-    alert('delete');
+    alert('deleteChxx');
 }
