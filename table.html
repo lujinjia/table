@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="documentTest.css">
+	<title>Sort table</title>
+</head>
+<body>
+	<div class="ui-breadcrumb">
+		<table>
+			<tbody>
+				<tr>
+					<td width="80px"><span class="ubc-title">存货信息</span></td>
+					<td width="300px">
+						<span>搜索：</span>
+						<div class="in-search">
+							<input type="text" id="keyWord" placeholder="请输入存货编码或名称">
+							<a href="#" id="search_icon"><i class="icon icons-search-black"></i></a>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<table id="sortTable" class="ui-table">
+		<thead >
+			<tr >
+				<th data-checkbox ><input type="checkbox" name="checkAll" id="checkAll"></th>
+				<th data-sort = '0' data-search>存货编码</th>
+				<th data-sort = '0' data-search>存货名称</th>
+				<th data-sort = '0'>税率</th>
+				<th data-sort = '0'>征收率</th>
+				<th data-select = '{ "0":"停用","1":"启用"}'>状态</th>
+                <th>操作</th>
+			</tr>
+		</thead>
+
+		<tbody id="sort_tbody">
+		</tbody>
+	</table>
+</body>
+<script type="text/javascript" src="documentTest.js"></script>
+</html>
