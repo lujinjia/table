@@ -1,0 +1,141 @@
+a {
+    vertical-align: top;
+    margin-left: 5px;
+    color: #298de8;
+    cursor: pointer;
+}
+
+.ui-table input[type=text],.ui-fixedHead-table input[type=text] {
+    border: 1px solid #c2e2f2;
+    width: 100%;
+    box-sizing: border-box;
+    height: 26px
+}
+
+.ui-table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.ui-table tr td,.ui-table tr th {
+    line-height: 30px;
+    box-sizing: border-box;
+    height: 30px;
+    padding-right: 2px;
+    padding-left: 2px;
+    word-break: break-all;
+    border: 1px solid #e0e0e0;
+    text-align:center;
+}
+
+.ui-table tr th {
+    font-weight: bold;
+    text-align: center;
+    color: #303030;
+    background-color: #e6f0f2
+}
+
+.ui-table .even_line {
+    background-color: #eef6ff
+}
+
+.ui-table tr th {
+    border-bottom: 2px solid #95ccee
+}
+
+.ui-table tr .th-border-e0 {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.ui-table-nb {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.ui-table-nb tr td,.ui-table-nb tr th {
+    line-height: 30px;
+    box-sizing: border-box;
+    height: 30px;
+    padding-right: 2px;
+    padding-left: 2px;
+    word-break: break-all;
+    border: 1px solid #e0e0e0
+}
+
+.ui-table-nb tr th {
+    font-weight: bold;
+    text-align: center;
+    color: #303030;
+    background-color: #e6f0f2
+}
+
+.ui-table-nb .even_line {
+    background-color: #eef6ff
+}
+
+.ui-breadcrumb {
+    border-bottom: 1px solid #e0e0e0;
+    padding-left: 10px
+}
+
+.ui-breadcrumb table {
+    width: 100%;
+    table-layout: fixed
+}
+
+.ui-breadcrumb table td {
+    height: 40px;
+    line-height: 40px
+}
+
+.ui-breadcrumb .ubc-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #666
+}
+
+.ui-breadcrumb .in-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+    width: 80px
+}
+
+.ui-breadcrumb .in-search {
+    width: 200px;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block
+}
+
+.ui-breadcrumb .in-search input {
+    padding-left: 7px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    line-height: 24px
+}
+
+.ui-breadcrumb .in-search input+a {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 2
+}
+
+.ui-breadcrumb .in-search .clearText {
+    margin-right: 0;
+    display: none
+}
+
+.ui-breadcrumb .in-btn-wrap {
+    text-align: right;
+    padding-right: 10px
+}
+
+.ui-breadcrumb .ui-tab-nav li {
+    line-height: 40px;
+    height: 40px
+}
