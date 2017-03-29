@@ -269,10 +269,25 @@ var Insert = (function() {
    return Insert;
 })();
 
+//为设置元素的innerHTML定义简单的流式API
+function ElementStream(elt) {
+    if (typeof elt === 'string') elt = document.getElementById(elt);
+    this.elt = elt;
+    this.buffer = '';
+}
 
+ElementStream.prototype.write = function() {
+    this.buffer += Array.prototype.join.call(arguments, '');
+};
 
+ElementStream.prototype.writeln = function() {
+    this.buffer += Array.prototype.join.call(arguments, '') + '\n';
+};
 
-
+ElementStream.prototype.close = function() {
+    this.elt.innerHTML = this.buffer;
+    this.buffer = '';
+}
 
 
 
